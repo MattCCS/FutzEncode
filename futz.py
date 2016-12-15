@@ -1,6 +1,8 @@
 
 import base64
 import math
+import time
+import random
 
 
 CHARS = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'''
@@ -20,6 +22,10 @@ TO_MAP = set(range(256))
 AVAILABLE = set(range(256))
 PREFERENCE = ''' eEtTaAoOiInNsSrRhHlLdDcCuU\nmMfFpPgGwWyYbB,.vVkK()_;"='-\txX/0$*1jJ:{}>qQ[]2zZ!<?3+5\\4#@|6&987%^~`'''  # http://letterfrequency.org/
 REMAP = {}
+
+
+# WORDS = bytes(random.randint(0, 255) for _ in range(1000000))
+# _ = ''.join("{:08b}".format(c) for c in WORDS)
 
 
 for (i, char) in enumerate(PREFERENCE):
